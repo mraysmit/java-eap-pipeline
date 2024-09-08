@@ -1,8 +1,8 @@
 package dev.mars;
 
-public class BookingStage implements TradeProcessingFlow {
+public class BookingStage implements Operation<Trade> {
 
-    public Trade process(Trade trade) {
+    public Trade invoke(Trade trade) {
 
         if ("CONFIRMED".equals(trade.getStatus()) || "BOOKED".equals(trade.getStatus()))  {
             trade.setStatus("BOOKED");
@@ -13,5 +13,7 @@ public class BookingStage implements TradeProcessingFlow {
         }
         return trade;
     }
+
+
 }
 

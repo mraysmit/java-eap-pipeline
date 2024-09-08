@@ -3,18 +3,18 @@ package dev.mars;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TradeProcessingPipeline implements ProcessingPipeline<Trade> {
+public class ProcessingPipelineC<T extends Trade> implements ProcessingPipeline<T> {
 
-    private final List<Operation<Trade>> pipeline = new ArrayList<>();
+    private final List<Operation<T>> pipeline = new ArrayList<>();
 
-    public TradeProcessingPipeline addStage(Operation<Trade> stage) {
+    public ProcessingPipelineC<T> addStage(Operation<T> stage) {
         pipeline.add(stage);
         return this;
     }
 
     @Override
-    public Trade process(Trade trade) {
-        for (Operation<Trade> stage : pipeline) {
+    public T process(T trade) {
+        for (Operation<T> stage : pipeline) {
             stage.invoke(trade);
 
             if ("INVALID".equals(trade.getStatus()) ||

@@ -13,7 +13,7 @@ public class ConfirmationStageTest {
         Trade trade = new Trade("ORD123", "ABC",100.0);
         trade.setStatus("VALID");
         ConfirmationStage stage = new ConfirmationStage();
-        stage.process(trade);
+        stage.invoke(trade);
         assertEquals("CONFIRMED", trade.getStatus());
     }
 
@@ -22,7 +22,7 @@ public class ConfirmationStageTest {
         Trade trade = new Trade("ORD123","ABC", 100.0);
         trade.setStatus("INVALID");
         ConfirmationStage stage = new ConfirmationStage();
-        stage.process(trade);
+        stage.invoke(trade);
         assertEquals("FAILED", trade.getStatus());
     }
 }

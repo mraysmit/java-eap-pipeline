@@ -13,7 +13,7 @@ public class BookingStageTest {
         Trade trade = new Trade("TRADE123", "ABC", 100.0);
         trade.setStatus("BOOKED");
         BookingStage stage = new BookingStage();
-        stage.process(trade);
+        stage.invoke(trade);
         assertEquals("BOOKED", trade.getStatus());
     }
 
@@ -22,7 +22,7 @@ public class BookingStageTest {
         Trade order = new Trade("TRADE456", "XYZ",100.0);
         order.setStatus("VALID");
         BookingStage stage = new BookingStage();
-        stage.process(order);
+        stage.invoke(order);
         assertEquals("NOT_BOOKED", order.getStatus());
     }
 }

@@ -11,7 +11,7 @@ public class TradeProcessingPipelineTest {
     public void testPipelineProcessing() {
         Trade trade = new Trade("TRADE123", "ABC", 100.0);
 
-        TradeProcessingPipeline pipeline = new TradeProcessingPipeline();
+        ProcessingPipelineC pipeline = new ProcessingPipelineC();
         pipeline.addStage(new ValidationStage());
         pipeline.addStage(new ConfirmationStage());
         pipeline.addStage(new BookingStage());
@@ -25,7 +25,7 @@ public class TradeProcessingPipelineTest {
     public void testPipelineInvalidTrade() {
         Trade trade = new Trade("TRADE456", "XYZ",2000.0);
 
-        TradeProcessingPipeline pipeline = new TradeProcessingPipeline();
+        ProcessingPipelineC pipeline = new ProcessingPipelineC();
         pipeline.addStage(new ValidationStage());
         pipeline.addStage(new ConfirmationStage());
         pipeline.addStage(new BookingStage());

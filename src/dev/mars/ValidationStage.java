@@ -1,8 +1,8 @@
 package dev.mars;
 
-public class ValidationStage implements TradeProcessingFlow {
+public class ValidationStage implements Operation<Trade> {
 
-    public Trade process(Trade trade) {
+    public Trade invoke(Trade trade) {
         if (trade.getAmount() > 1000) {
             trade.setStatus("INVALID");
             System.out.println("Trade Amount Invalid " + trade);
@@ -22,4 +22,6 @@ public class ValidationStage implements TradeProcessingFlow {
         }
         return trade;
     }
+
+
 }

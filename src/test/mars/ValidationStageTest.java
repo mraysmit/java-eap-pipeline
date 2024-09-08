@@ -12,7 +12,7 @@ public class ValidationStageTest {
     public void testValidTrade() {
         Trade trade = new Trade("ORD123", "ABC", 100.0);
         ValidationStage stage = new ValidationStage();
-        stage.process(trade);
+        stage.invoke(trade);
         assertEquals("VALID", trade.getStatus());
         assertEquals("ABC", trade.getCounterpartyId());
     }
@@ -21,7 +21,7 @@ public class ValidationStageTest {
     public void testInvalidOrder() {
         Trade trade = new Trade("ORD123","XYZ", 2000.0);
         ValidationStage stage = new ValidationStage();
-        stage.process(trade);
+        stage.invoke(trade);
         assertEquals("INVALID", trade.getStatus());
     }
 }

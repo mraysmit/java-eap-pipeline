@@ -7,7 +7,7 @@ public class Main {
 
         Trade trade = new Trade("ORD123","ABC", 200.0);
 
-        TradeProcessingPipeline pipeline = new TradeProcessingPipeline();
+        ProcessingPipelineC<Trade> pipeline = new ProcessingPipelineC<>();
         pipeline.addStage(new ValidationStage());
         pipeline.addStage(new ConfirmationStage());
         pipeline.addStage(new BookingStage());
@@ -16,4 +16,7 @@ public class Main {
 
 
     }
+
+
+
 }

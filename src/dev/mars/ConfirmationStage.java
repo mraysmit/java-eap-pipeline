@@ -1,9 +1,9 @@
 package dev.mars;
 
-public class ConfirmationStage implements TradeProcessingFlow {
+public class ConfirmationStage implements Operation<Trade> {
 
     @Override
-    public Trade process(Trade trade) {
+    public Trade invoke(Trade trade) {
         if ("VALID".equals(trade.getStatus())) {
             trade.setStatus("CONFIRMED");
             System.out.println("Trade confirmed " + trade);
@@ -13,5 +13,7 @@ public class ConfirmationStage implements TradeProcessingFlow {
         }
         return trade;
     }
+
+
 }
 
