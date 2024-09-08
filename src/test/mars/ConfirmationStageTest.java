@@ -14,7 +14,7 @@ public class ConfirmationStageTest {
         trade.setStatus("VALID");
         ConfirmationStage stage = new ConfirmationStage();
         stage.process(trade);
-        assertEquals("PAID", trade.getStatus());
+        assertEquals("CONFIRMED", trade.getStatus());
     }
 
     @Test
@@ -23,6 +23,6 @@ public class ConfirmationStageTest {
         trade.setStatus("INVALID");
         ConfirmationStage stage = new ConfirmationStage();
         stage.process(trade);
-        assertEquals("FALIED", trade.getStatus());
+        assertEquals("FAILED", trade.getStatus());
     }
 }

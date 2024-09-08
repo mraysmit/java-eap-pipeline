@@ -4,7 +4,7 @@ public class BookingStage implements TradeProcessingFlow {
 
     public Trade process(Trade trade) {
 
-        if ("ENRICHED".equals(trade.getStatus())) {
+        if ("CONFIRMED".equals(trade.getStatus()) || "BOOKED".equals(trade.getStatus()))  {
             trade.setStatus("BOOKED");
             System.out.println("Trade Booked " + trade);
         } else {

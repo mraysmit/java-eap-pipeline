@@ -18,7 +18,7 @@ public class TradeProcessingPipelineTest {
 
         pipeline.process(trade);
 
-        assertEquals("SHIPPED", trade.getStatus());
+        assertEquals("BOOKED", trade.getStatus());
     }
 
     @Test

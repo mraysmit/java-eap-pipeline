@@ -6,6 +6,7 @@ public class ValidationStage implements TradeProcessingFlow {
         if (trade.getAmount() > 1000) {
             trade.setStatus("INVALID");
             System.out.println("Trade Amount Invalid " + trade);
+            return trade;
         } else {
             trade.setStatus("VALID");
             System.out.println("Trade Amount Validated " + trade);
@@ -14,6 +15,7 @@ public class ValidationStage implements TradeProcessingFlow {
         if (trade.getCounterpartyId().isEmpty()) {
             trade.setStatus("INVALID");
             System.out.println("Trade Counterparty Invalid " + trade);
+            return trade;
         } else {
             trade.setStatus("VALID");
             System.out.println("Trade Counterparty Validated " + trade);

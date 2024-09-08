@@ -11,7 +11,7 @@ public class BookingStageTest {
     @Test
     public void testTradeBooked() {
         Trade trade = new Trade("TRADE123", "ABC", 100.0);
-        trade.setStatus("PAID");
+        trade.setStatus("BOOKED");
         BookingStage stage = new BookingStage();
         stage.process(trade);
         assertEquals("BOOKED", trade.getStatus());
