@@ -1,4 +1,6 @@
-package dev.mars;
+package dev.mars.tradeprocess;
+
+import dev.mars.pipeline.Operation;
 
 public class ConfirmationStage implements Operation<Trade> {
 

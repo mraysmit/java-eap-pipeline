@@ -1,7 +1,8 @@
 package test.mars;
 
 
-import dev.mars.*;
+import dev.mars.tradeprocess.Trade;
+import dev.mars.tradeprocess.TradeStatus;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -1,5 +1,5 @@
 // src/dev/mars/TradeStatus.java
-package dev.mars;
+package dev.mars.tradeprocess;
 
 public enum TradeStatus {
     NEW,

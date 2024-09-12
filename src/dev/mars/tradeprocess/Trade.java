@@ -1,11 +1,10 @@
-package dev.mars;
+package dev.mars.tradeprocess;
 
 public class Trade {
     private final String tradeId;
     private final String counterpartyId;
     private final double amount;
     private TradeStatus status;
-
 
     public Trade(String tradeId, String counterpartyId, double amount) {
         this(tradeId, counterpartyId, amount, TradeStatus.NEW);

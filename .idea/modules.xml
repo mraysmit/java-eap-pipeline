@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/java-pipeline-pattern.iml" filepath="$PROJECT_DIR$/java-pipeline-pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-eap-pipeline.iml" filepath="$PROJECT_DIR$/java-eap-pipeline.iml" />
     </modules>
   </component>
 </project>

@@ -1,8 +1,8 @@
 package test.mars;
 
-import dev.mars.Trade;
-import dev.mars.TradeStatus;
-import dev.mars.ValidationStage;
+import dev.mars.tradeprocess.Trade;
+import dev.mars.tradeprocess.TradeStatus;
+import dev.mars.tradeprocess.ValidationStage;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="test.mars in java-pipeline-pattern" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
-    <module name="java-pipeline-pattern" />
+    <module name="java-eap-pipeline" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="test.mars.*" />

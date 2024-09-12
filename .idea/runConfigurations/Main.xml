@@ -1,10 +1,10 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
     <option name="MAIN_CLASS_NAME" value="dev.mars.Main" />
-    <module name="java-pipeline-pattern" />
+    <module name="java-eap-pipeline" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="dev.mars.BookingStage" />
+        <option name="PATTERN" value="dev.mars.tradeprocess.BookingStage" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>

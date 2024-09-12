@@ -1,6 +1,6 @@
 package test.mars;
 
-import dev.mars.*;
+import dev.mars.tradeprocess.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
