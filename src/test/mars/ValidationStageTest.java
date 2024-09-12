@@ -1,6 +1,7 @@
 package test.mars;
 
 import dev.mars.Trade;
+import dev.mars.TradeStatus;
 import dev.mars.ValidationStage;
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +14,7 @@ public class ValidationStageTest {
         Trade trade = new Trade("ORD123", "ABC", 100.0);
         ValidationStage stage = new ValidationStage();
         stage.invoke(trade);
-        assertEquals("VALID", trade.getStatus());
+        assertEquals(TradeStatus.VALID, trade.getStatus());
         assertEquals("ABC", trade.getCounterpartyId());
     }
 
@@ -22,6 +23,6 @@ public class ValidationStageTest {
         Trade trade = new Trade("ORD123","XYZ", 2000.0);
         ValidationStage stage = new ValidationStage();
         stage.invoke(trade);
-        assertEquals("INVALID", trade.getStatus());
+        assertEquals(TradeStatus.INVALID, trade.getStatus());
     }
 }

@@ -2,6 +2,7 @@ package test.mars;
 
 import dev.mars.Trade;
 import dev.mars.ConfirmationStage;
+import dev.mars.TradeStatus;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,18 +12,18 @@ public class ConfirmationStageTest {
     @Test
     public void testConfirmationProcessed() {
         Trade trade = new Trade("ORD123", "ABC",100.0);
-        trade.setStatus("VALID");
+        trade.setStatus(TradeStatus.VALID);
         ConfirmationStage stage = new ConfirmationStage();
         stage.invoke(trade);
-        assertEquals("CONFIRMED", trade.getStatus());
+        assertEquals(TradeStatus.CONFIRMED, trade.getStatus());
     }
 
     @Test
     public void testConfirmationFailed() {
         Trade trade = new Trade("ORD123","ABC", 100.0);
-        trade.setStatus("INVALID");
+        trade.setStatus(TradeStatus.INVALID);
         ConfirmationStage stage = new ConfirmationStage();
         stage.invoke(trade);
-        assertEquals("FAILED", trade.getStatus());
+        assertEquals(TradeStatus.NOT_CONFIRMED, trade.getStatus());
     }
 }
