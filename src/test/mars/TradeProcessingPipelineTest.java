@@ -33,7 +33,7 @@ public class TradeProcessingPipelineTest {
         //
         pipeline.process(trade);
 
-        assertEquals(TradeStatus.NOT_BOOKED, trade.getStatus());
+        assertEquals(TradeStatus.INVALID, trade.getStatus());
     }
 }
 
